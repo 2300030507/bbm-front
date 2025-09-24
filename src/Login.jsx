@@ -17,7 +17,7 @@ function Login() {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:8080/donors/forgot-password?email=" + identifier, {
+      const response = await fetch("http://localhost:8081/donors/forgot-password?email=" + identifier, {
         method: "POST"
       });
 
@@ -42,7 +42,7 @@ function Login() {
         ? { email: identifier, phone: "", password }
         : { email: "", phone: identifier, password };
 
-      const response = await fetch("http://localhost:8080/donors/login", {
+      const response = await fetch("http://localhost:8081/donors/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
