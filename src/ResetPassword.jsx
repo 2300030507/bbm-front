@@ -27,7 +27,7 @@ function ResetPassword() {
     setMessage("Processing...");
 
     try {
-      const response = await fetch(`http://localhost:8080/donors/reset-password?token=${token}&newPassword=${newPassword}`, {
+      const response = await fetch(`http://localhost:8081/donors/reset-password?token=${token}&newPassword=${newPassword}`, {
         method: "POST",
       });
 
