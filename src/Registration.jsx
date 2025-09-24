@@ -75,7 +75,7 @@ function RegisterUser() {
       return;
     }
     try {
-      const response = await axios.post("http://localhost:8080/donors/register", formData);
+      const response = await axios.post("http://localhost:8081/donors/register", formData);
       setMessage(response.data);
     } catch (error) {
       setMessage(error.response?.status === 409 ? "User with this phone or email already exists" : "An error occurred during registration");
