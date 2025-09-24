@@ -108,7 +108,7 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
-    <Router>
+    
       <Routes>
         <Route path="/" element={<Home isLoggedIn={isLoggedIn} />} />
         <Route path="/register" element={<Layout isLoggedIn={isLoggedIn}><Register /></Layout>} />
@@ -117,7 +117,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/search-donor" element={<Layout isLoggedIn={isLoggedIn}><SearchDonor /></Layout>} />
       </Routes>
-    </Router>
+    
   );
 }
 
